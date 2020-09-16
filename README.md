@@ -16,4 +16,4 @@ python run.py <image_path>
 ```
 3. Go to bed.
 
-![버튼눌러주는애](img/mdimg.png)
+![버튼눌러주는애](./img/mdimg.png)
