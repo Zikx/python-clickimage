@@ -5,7 +5,7 @@ def main(params):
     try:
         while True:
             img = pyautogui.locateCenterOnScreen(params)
-            pyautogui.doubleClick(img)
+            pyautogui.doubleClick(params)
     except:
         pass
 
