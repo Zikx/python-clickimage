@@ -19,4 +19,4 @@ python run.py <click>
 ```
 1. Go to bed.
 
-![버튼눌러주는애](./img/mdimg.png)
+![버튼눌러주는애](https://github.com/Zikx/python-clickimage/blob/master/img/mdimg.PNG)
