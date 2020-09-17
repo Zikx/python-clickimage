@@ -8,6 +8,7 @@ def main(*args):
         while True:
             pyautogui.click(pyautogui.position(),button='left',clicks=1)
             t = random.randrange(60)
+            print(f'after {t} seconds will be refreshed')
             time.sleep(t)
     else:
         try:
