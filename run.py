@@ -3,11 +3,11 @@ import pyautogui
 import time
 import random
 
-def main(*args):
-    if 'click' in args:
+def main(command,*args):
+    if 'click' in command:
         while True:
             pyautogui.click(pyautogui.position(),button='left',clicks=1)
-            t = random.randrange(60)
+            t = random.randrange(int(command[command.index('click') + 1]),int(command[command.index('click') + 2]))
             print(f'after {t} seconds will be refreshed')
             time.sleep(t)
     else:
@@ -21,4 +21,4 @@ def main(*args):
     
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv)
