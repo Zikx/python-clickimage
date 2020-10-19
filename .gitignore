@@ -1,0 +1,8 @@
+# ignore pyinstaller
+*.exe
+
+run.spec
+
+dist/ 
+build/ 
+__pycache__/ 
