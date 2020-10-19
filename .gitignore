@@ -1,7 +1,6 @@
 # ignore pyinstaller
 *.exe
-
-run.spec
+*.spec
 
 dist/ 
 build/ 
