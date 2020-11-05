@@ -3,23 +3,28 @@ import pyautogui
 import time
 import random
 import winsound
+import schedule
 
 # recom x=756, y=1019
 
-def main(command,*args):
+def main():
+    command = input('Please enter a command : ')
+    x, y = map(int, input('Please enter the time interval : ').split())
     n = int(input('Set the number of position : '))
     loca = [findpos() for _ in range(n)]
     
     if 'click' in command:
         while True:
             pyautogui.click(random.choice(loca),button='left',clicks=1)
-            t = random.randrange(int(command[command.index('click') + 1]),int(command[command.index('click') + 2]))
+            # t = random.randrange(int(command[command.index('click') + 1]),int(command[command.index('click') + 2]))
+            t = random.randrange(x, y)
             print(f'after {t} seconds will be refreshed')
             time.sleep(t)
 
     elif 'move' in command:
         while True:
-            t = random.randrange(int(command[command.index('move') + 1]),int(command[command.index('move') + 2]))
+            # t = random.randrange(int(command[command.index('move') + 1]),int(command[command.index('move') + 2]))
+            t = random.randrange(x, y)
             moveMouse(random.choice(loca),t)
             # time.sleep(t)
     else:
@@ -36,6 +41,7 @@ def findpos():
         if time.time() > tar_time:
             winsound.Beep(440, 250)
             x, y = pyautogui.position()
+            print(f'x : {x}, y: {y}')
             return x, y
 
 def moveMouse(pos, duration):
@@ -43,4 +49,5 @@ def moveMouse(pos, duration):
     pyautogui.moveTo(x,y,duration)
 
 if __name__ == "__main__":
-    main(sys.argv)
+    # main(sys.argv)
+    main()
