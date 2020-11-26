@@ -21,6 +21,7 @@ def main():
             print(f'after {t} seconds will be refreshed')
             time.sleep(t)
 
+
     elif 'move' in command:
         while True:
             # t = random.randrange(int(command[command.index('move') + 1]),int(command[command.index('move') + 2]))
