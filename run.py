@@ -9,6 +9,15 @@ import schedule
 
 def main():
     command = input('Please enter a command : ')
+
+    loca_fixed = [(141, 138), (106, 490), (115, 531), (355, 300), (508, 311)]
+    if 'auto' in command:
+        while True:
+            pyautogui.click(random.choice(loca_fixed),button='left',clicks=1)
+            t = random.randrange(120, 400)
+            print(f'after {t} seconds will be refreshed')
+            time.sleep(t)
+
     x, y = map(int, input('Please enter the time interval : ').split())
     n = int(input('Set the number of position : '))
     loca = [findpos() for _ in range(n)]
@@ -20,7 +29,6 @@ def main():
             t = random.randrange(x, y)
             print(f'after {t} seconds will be refreshed')
             time.sleep(t)
-
 
     elif 'move' in command:
         while True:
